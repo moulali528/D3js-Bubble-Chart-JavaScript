@@ -1,0 +1,70 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.radio-group fieldset {
+  margin-bottom: 10px;
+}
+
+.radio-group legend {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.radio-group label {
+  margin-right: 20px;
+}
+
+
+.button {
+  background-color: silver;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #535362;
+}
+
+.tooltip {
+  position: absolute;
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  visibility: hidden;
+  pointer-events: none;
+}
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent transparent;
+}
+
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+th {
+    background-color: #f2f2f2;
+  }

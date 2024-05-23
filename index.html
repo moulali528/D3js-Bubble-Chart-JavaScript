@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Chart Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Plot Selection Form</h1>
+        <form id="formPlot">
+            <div class="radio-group">
+                <fieldset>
+                    <legend>By Country</legend>
+                    <label>
+                        <input type="radio" name="plotOption" value="Population size" required>
+                        Population size
+                    </label>
+                    <label>
+                        <input type="radio" name="plotOption" value="Number of borders">
+                        Number of borders
+                    </label>
+                    <label>
+                        <input type="radio" name="plotOption" value="Number of timezones">
+                        Number of timezones
+                    </label>
+                    <label>
+                        <input type="radio" name="plotOption" value="Number of languages">
+                        Number of languages
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>By Region</legend>
+                    <label>
+                        <input type="radio" name="plotOption" value="Number of countries in the region">
+                        Number of countries in the region
+                    </label>
+                    <label>
+                        <input type="radio" name="plotOption" value="Number of unique timezones in the region">
+                        Number of unique timezones in the region
+                    </label>
+                </fieldset>
+            </div></br>
+            <button type="submit" class="button">Render Data</button>
+        </form>
+    </div>
+
+    <div id="chartSection" hidden>
+        <h2 id="chartHeading">Bubble Chart</h2>
+        <div id="chartPlot" ></div>
+    </div>
+    <div class="tooltip"></div>
+    <div id="tableSection" hidden>
+        <h2 id="tableHeading">Table Data</h2>
+        <div id="tablePlot" class="hidden"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
