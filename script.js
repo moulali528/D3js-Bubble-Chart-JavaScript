@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderBubbleChart(data) {
     chartPlot.html("");
-    document.getElementById("chartSection").hidden = false;
+    $("#chartSection").prop("hidden", false);
 
     const width = 800;
     const height = 600;
@@ -151,8 +151,8 @@ document.addEventListener("DOMContentLoaded", () => {
       .attr("transform", (d) => `translate(${d.x},${d.y})`)
       .on("mouseover", (event, d) => {
         const tag = d.criteria
-          ? `Name: ${d.name}<br>${d.heading}: ${d.value}<br>Languages: ${d.languagesCount}<br>Population: ${d.population}`
-          : `Name: ${d.name}<br>${d.heading}: ${d.value}<br>Capital: ${d.capital}<br>Alpha3Code: ${d.alpha3Code}<br>Native Name: ${d.nativeName}`;
+          ? `Region Name: ${d.name}<br>${d.heading}: ${d.value}<br>Languages: ${d.languagesCount}<br>Population: ${d.population}`
+          : `Country Name: ${d.name}<br>${d.heading}: ${d.value}<br>Capital: ${d.capital}<br>Alpha3Code: ${d.alpha3Code}<br>Native Name: ${d.nativeName}`;
         tooltip
           .html(tag)
           .style("visibility", "visible")
@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderTableData(data) {
     tableData.html("");
-    document.getElementById("tableSection").hidden = false;
+    $("#tableSection").prop("hidden", false);
 
     const table = tableData.append("table");
     const thead = table.append("thead");
