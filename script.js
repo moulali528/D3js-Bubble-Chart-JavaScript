@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .attr("transform", (d) => `translate(${d.x},${d.y})`)
       .on("mouseover", (event, d) => {
         const tag = d.criteria
-          ? `Region Name: ${d.name}<br>${d.heading}: ${d.value}<br>Languages: ${d.languagesCount}<br>Population: ${d.population}`
+          ? `Region Name: ${d.name}<br>${d.heading}: ${d.value}<br>Total Languages: ${d.languagesCount}<br>Total Population: ${d.population}`
           : `Country Name: ${d.name}<br>${d.heading}: ${d.value}<br>Capital: ${d.capital}<br>Alpha3Code: ${d.alpha3Code}<br>Native Name: ${d.nativeName}`;
         tooltip
           .html(tag)
