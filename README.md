@@ -2,7 +2,7 @@
 
 Exercise 1 - Form and chart
 
-Created form to allow the user to select one specific criteria based on the following options.
+Created a form to allow the user to select one specific criteria based on the following options.
 
 By country:
 Population size,
