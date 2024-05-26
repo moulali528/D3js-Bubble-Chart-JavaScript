@@ -10,14 +10,19 @@ document.addEventListener("DOMContentLoaded", () => {
       'input[name="plotOption"]:checked'
     ).value;
 
-    fetch(sourceData)
-      .then((response) => response.json())
-      .then((data) => {
+    fetchDataAndRender();
+
+    async function fetchDataAndRender() {
+      try {
+        const response = await fetch(sourceData);
+        const data = await response.json();
         const processedData = processDataPoints(data, selectedCriteria);
         renderBubbleChart(processedData);
         renderTableData(processedData);
-      })
-      .catch((error) => console.error("Error fetching data:", error));
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
   });
 
   function processDataPoints(data, criteria) {
