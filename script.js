@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const chartPlot = d3.select("#chartPlot");
   const tableData = d3.select("#tablePlot");
-  const sourceData = "../data/countries.json";
+  const sourceData = "http://localhost:8000/data/countries.json";
   const tooltip = d3.select(".tooltip");
 
   document.getElementById("formPlot").addEventListener("submit", (event) => {
